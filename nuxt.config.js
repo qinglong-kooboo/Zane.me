@@ -13,7 +13,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/bitbug_favicon.ico' }]
   },
 
   /*
@@ -24,12 +24,22 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: [
+    {
+      src: './sass/app.scss',
+      lang: 'sass'
+    }
+  ],
+
+  styleResources: {
+    scss: './sass/init.scss'
+  },
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [
+  ],
 
   /*
   ** Nuxt.js modules
@@ -37,7 +47,8 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Axios module configuration
@@ -62,7 +73,17 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        // Object.assign(config.resolve.alias, {
+        //   'components': path.resolve(__dirname, 'components')
+        //  })
       }
+      config.module.rules.push({
+        test: /\.scss/,
+        oneOf: [
+          { use: ['import-glob-loader2'] }
+        ],
+        enforce: 'pre'
+      })
     }
   }
 }
