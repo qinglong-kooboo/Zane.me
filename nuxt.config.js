@@ -11,7 +11,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'Zane.me' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/bitbug_favicon.ico' }]
   },
@@ -39,6 +39,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { mode: 'client', src: './plugins/swiper' }
   ],
 
   /*

@@ -13,6 +13,7 @@
 <style lang="scss" scoped>
 .sideBar {
   width: 18em;
+  margin-right: 13.5em;
   background-color: #fff;
 }
 </style>

@@ -1,9 +1,5 @@
 <template>
-  <div class="main">
-    <app-layout>
-      <nuxt />
-    </app-layout>
-  </div>
+  <app-layout />
 </template>
 <script>
   import AppLayout from '../components/Layout/layout'
@@ -15,7 +11,4 @@
 </script>
 
 <style lang="scss" scoped>
-.main {
-  position: relative;
-}
 </style>

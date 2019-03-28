@@ -75,7 +75,7 @@
   position: fixed;
   left: calc((100% - 75em) / 2);
   list-style: none;
-  padding: 1.5em 0 0 0;
+  padding: 1em 0 0 0;
   margin: 0;
   z-index: 1001;
   .menuItem {

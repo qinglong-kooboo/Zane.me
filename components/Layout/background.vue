@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <div class="global-background">
-      <img src="../../assets/imgs/background.png" alt="">
-    </div>
+  <div class="global-background">
+    <div class="backgroundImg"></div>
+    <img src="../../assets/imgs/background.png" alt="">
   </div>
 </template>
 
@@ -18,10 +17,13 @@
     width: 100%;
     height: 100%;
     background-color: #eee;
-    img {
-      position: fixed;
+    .backgroundImg {
+      // position: fixed;
+      background-image: url(../../assets/imgs/background.png);
+      background-attachment:fixed;
+      background-repeat: no-repeat;
       width: 100%;
-      height: 150%;
+      height: 100%;
       opacity: .4;
     }
   }
