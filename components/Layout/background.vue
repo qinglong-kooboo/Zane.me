@@ -1,7 +1,6 @@
 <template>
   <div class="global-background">
     <div class="backgroundImg"></div>
-    <img src="../../assets/imgs/background.png" alt="">
   </div>
 </template>
 
