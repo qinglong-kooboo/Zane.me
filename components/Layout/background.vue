@@ -17,7 +17,9 @@
     height: 100%;
     background-color: #eee;
     .backgroundImg {
-      // position: fixed;
+      position: absolute;
+      width: 100%;
+      height: 100%;
       background-image: url(../../assets/imgs/background.png);
       background-attachment:fixed;
       background-repeat: no-repeat;

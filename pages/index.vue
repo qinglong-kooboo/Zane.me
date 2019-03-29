@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mainContent">
     <swiper :sliders="sliderPics" />
     <div class="sliderTextWrapper">
       <div class="sliderTextIcon">
@@ -82,4 +82,21 @@
   }
 </script>
 <style lang="scss" scoped>
+.mainContent {
+  .sliderTextWrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right,#AAAAAA, #fff);
+    color: #fff;
+    .sliderTextIcon {
+      flex:  0 1 60px;
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+}
 </style>
