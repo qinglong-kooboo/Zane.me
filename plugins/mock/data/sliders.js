@@ -53,6 +53,10 @@ const data = {
       {
         text: '去喜欢，去放肆，去无疾而终。',
         index: 5
+      },
+      {
+        text: '兴趣是最好的老师，其次是耻辱。',
+        index: 6
       }
     ],
     mode: 'col',

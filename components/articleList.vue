@@ -1,15 +1,21 @@
 <template>
   <ul class="list">
     <li v-for="(item, index) in list" :key="index" class="article-item">
-      <img :src="item.articleImg" alt="" class="article-img">
+      <div class="article-img-wrapper">
+        <img :src="item.articleImg" alt="" class="article-img">
+      </div>
       <div class="article-info">
         <h4>{{ item.articleTitle }}</h4>
         <p class="article-des">{{ item.articleSubTitle }}</p>
         <div class="article-meta">
-          <span class="date">{{ item.articleCreatedTime }}</span>
-          <span class="view">{{ item.articleViewCount }}</span>
-          <span class="comments">{{ item.articleComments }}</span>
-          <span class="category">{{ item.articleCategory }}</span>
+          <span class="date">
+            <span class="iconfont">&#xe873;</span>{{ item.articleCreatedTime }}</span>
+          <span class="view">
+            <span class="iconfont">&#xe708;</span>{{ item.articleViewCount }}</span>
+          <span class="comments">
+            <span class="iconfont">&#xe68a;</span>{{ item.articleCommentCount }}</span>
+          <span class="category">
+            <span class="iconfont">&#xe619;</span>{{ item.articleCategory }}</span>
         </div>
       </div>
     </li>
@@ -18,46 +24,10 @@
 
 <script>
   export default {
-    data() {
-      return {
-        list: [
-          {
-            articleImg: 'https://i.ibb.co/yFbNSFj/pic2.png',
-            articleTitle: '2333333333',
-            articleSubTitle: '233333333333333',
-            articleCreatedTime: '2019/3/25',
-            articleViewCount: 23,
-            articleCommentCount: 5,
-            articleComments: 'think'
-          },
-          {
-            articleImg: 'https://i.ibb.co/yFbNSFj/pic2.png',
-            articleTitle: '2333333333',
-            articleSubTitle: '233333333333333',
-            articleCreatedTime: '2019/3/25',
-            articleViewCount: 23,
-            articleCommentCount: 5,
-            articleComments: 'think'
-          },
-          {
-            articleImg: 'https://i.ibb.co/yFbNSFj/pic2.png',
-            articleTitle: '2333333333',
-            articleSubTitle: '233333333333333',
-            articleCreatedTime: '2019/3/25',
-            articleViewCount: 23,
-            articleCommentCount: 5,
-            articleComments: 'think'
-          },
-          {
-            articleImg: 'https://i.ibb.co/yFbNSFj/pic2.png',
-            articleTitle: '2333333333',
-            articleSubTitle: '233333333333333',
-            articleCreatedTime: '2019/3/25',
-            articleViewCount: 23,
-            articleCommentCount: 5,
-            articleComments: 'think'
-          }
-        ]
+    props: {
+      list: {
+        type: Array,
+        default: () => {}
       }
     }
   }
@@ -65,23 +35,48 @@
 </script>
 <style lang="scss" scoped>
   .list {
+    background-color: $background;
     .article-item {
       height: 9.5em;
-      line-height: 9.5em;
-      padding: .5em;
+      padding-left: .5em;
       background-color: #fff;
-      font-size: 0;
-      img {
-        display: inline-block;
-        vertical-align: top;
-        width: 168px;
-        height: 119px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1em;
+      transition: background-color .3s ease-in-out;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        background-color: $hoverground;
+        img {
+          width: 168px;
+          height: 120px;
+          transform: translateZ(0) scale(1.2, 1.2)
+        }
+      }
+      .article-img-wrapper {
+        overflow: hidden;
+        img {
+          width: 168px;
+          height: 120px;
+          transition: transform 1s ease
+        }
       }
       .article-info {
-        display: inline-block;
-        vertical-align: top;
         width: calc(100% - 168px);
-        height: 119px;
+        margin-left: 1em;
+        height: 100%;
+        position: relative;
+        h4 {
+          line-height: 36px;
+          transition: transform .3s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            transform: translateX(5px);
+          }
+        }
         .article-des {
           height: 5em;
           margin: 0 0 .3em;
@@ -93,9 +88,25 @@
           -webkit-line-clamp: 3;
         }
         .article-meta {
-          position: absolute;
-          bottom: 0;
-          left: 0;
+          display: flex;
+          align-items: center;
+          height: 2em;
+          width: 100%;
+          color: $text;
+          .date {
+            flex: 1.5;
+            .iconfont {
+              font-size: 12px;
+              margin-right: .5em;
+            }
+          }
+          .view, .comments, .category {
+            flex: 1;
+            .iconfont {
+              font-size: 12px;
+              margin-right: .5em;
+            }
+          }
         }
       }
     }

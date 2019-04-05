@@ -42,10 +42,10 @@
     display: flex;
     justify-content: center;
     margin-top: $header-height;
+    margin-bottom: 5em;
     & > .content {
       position: relative;
       width: 75em;
-      height: 1000px;
       display: flex;
       justify-content: space-between;
       padding: 1em 0 0 0;

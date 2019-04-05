@@ -8,7 +8,7 @@
       </div>
       <slider :sliders="sliders.textSliders" />
     </div>
-    <article-list />
+    <article-list :list="articles" />
   </div>
 </template>
 
@@ -24,10 +24,16 @@
     computed: {
       sliders() {
         return this.$store.state.swiper.sliders
+      },
+      articles() {
+        return this.$store.state.articles.list
       }
     },
     fetch({ store }) {
-      return store.dispatch('swiper/getSlidersData')
+      return Promise.all([
+        store.dispatch('swiper/getSlidersData'),
+        store.dispatch('articles/getArticleList')
+      ])
     }
   }
 </script>
