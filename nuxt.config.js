@@ -1,5 +1,3 @@
-const pkg = require('./package')
-
 module.exports = {
   mode: 'universal',
 
@@ -7,13 +5,13 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: `Zane.me`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Zane.me' }
+      { hid: 'description', name: 'description', content: `Zane.me` }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/bitbug_favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/linkicon.ico' }]
   },
 
   /*
@@ -39,7 +37,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { mode: 'client', src: './plugins/swiper' }
+    { mode: 'client', src: './plugins/swiper' },
+    { src: '~plugins/mock/index', ssr: true }
   ],
 
   /*

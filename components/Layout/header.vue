@@ -4,7 +4,7 @@
       <div class="header-con">
         <div class="header-con-left">
           <span class="navbar-blank"></span>
-          <img src="../../assets/imgs/logo.svg" alt="header-logo">
+          <img src="../../assets/imgs/zane.jpg" alt="header-logo">
           <span class="slogan">每一个不曾起舞的日子，都是对生命的辜负</span>
         </div>
         <div class="header-con-right">
