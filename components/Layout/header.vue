@@ -4,11 +4,14 @@
       <div class="header-con">
         <div class="header-con-left">
           <span class="navbar-blank"></span>
-          <img src="../../assets/imgs/zane.jpg" alt="header-logo">
-          <span class="slogan">每一个不曾起舞的日子，都是对生命的辜负</span>
+          <nuxt-link :to="'/'" class="logo">
+            <img src="../../assets/imgs/zane.jpg" alt="header-logo">
+          </nuxt-link>
+          <nuxt-link :to="'/'">
+            <span class="slogan">每一个不曾起舞的日子，都是对生命的辜负</span>
+          </nuxt-link>
         </div>
         <div class="header-con-right">
-          1
         </div>
       </div>
     </nav>
@@ -45,6 +48,9 @@
         display: flex;
         align-items: center;
         position: relative;
+        .logo {
+          cursor: pointer;
+        }
         img {
           width: 8rem;
           height: auto;
@@ -97,11 +103,12 @@
         .slogan {
           user-select: none;
           color: $primary;
+          cursor: pointer;
         }
       }
       .header-con-right {
         width: 13em;
-        background-color: $primary;
+        background-color: #fff;
       }
     }
   }

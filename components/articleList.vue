@@ -2,11 +2,19 @@
   <ul class="list">
     <li v-for="(item, index) in list" :key="index" class="article-item">
       <div class="article-img-wrapper">
-        <img :src="item.articleImg" alt="" class="article-img">
+        <nuxt-link :to="`/article/${item.articleId}`">
+          <img :src="item.articleImg" alt="" class="article-img">
+        </nuxt-link>
       </div>
       <div class="article-info">
-        <h4>{{ item.articleTitle }}</h4>
-        <p class="article-des">{{ item.articleSubTitle }}</p>
+        <h4>
+          <nuxt-link :to="`/article/${item.articleId}`">
+            {{ item.articleTitle }}
+          </nuxt-link>
+        </h4>
+        <p class="article-des">
+          {{ item.articleSubTitle }}
+        </p>
         <div class="article-meta">
           <span class="date">
             <span class="iconfont">&#xe873;</span>{{ item.articleCreatedTime }}</span>
@@ -15,7 +23,7 @@
           <span class="comments">
             <span class="iconfont">&#xe68a;</span>{{ item.articleCommentCount }}</span>
           <span class="category">
-            <span class="iconfont">&#xe619;</span>{{ item.articleCategory }}</span>
+            <span class="iconfont">&#xe602;</span>{{ item.articleCategory }}</span>
         </div>
       </div>
     </li>
@@ -35,6 +43,7 @@
 </script>
 <style lang="scss" scoped>
   .list {
+    min-height: 9.5em;
     background-color: $background;
     .article-item {
       height: 9.5em;
@@ -57,10 +66,13 @@
         }
       }
       .article-img-wrapper {
+        width: 168px;
+        height: 120px;
         overflow: hidden;
+        cursor: pointer;
         img {
-          width: 168px;
-          height: 120px;
+          width: 100%;
+          height: 100%;
           transition: transform 1s ease
         }
       }

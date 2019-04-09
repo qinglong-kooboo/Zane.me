@@ -1,0 +1,6 @@
+.module-enter-active, .module-leave-active {
+  transition: opacity .25s
+}
+.module-enter, .module-leave-active {
+  opacity: 0
+}

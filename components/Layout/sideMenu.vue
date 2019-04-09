@@ -7,7 +7,7 @@
       :class="{ 'menuItem-active': isActive === index }"
       @click="triggerMenuItem(index)"
     >
-      <nuxt-link :to="'/'" exact>
+      <nuxt-link :to="item.route" exact>
         <i :class="item.icon"></i>
         <span
           class="menuTitle"
@@ -28,35 +28,43 @@
         menuList: [
           {
             title: '明殿',
-            icon: 'flaticon-chinese-new-year'
+            icon: 'flaticon-chinese-new-year',
+            route: '/'
           },
           {
             title: '宁静寺',
-            icon: 'flaticon-china'
+            icon: 'flaticon-china',
+            route: '/diary'
           },
           {
             title: '琼宝阁',
-            icon: 'flaticon-fan'
+            icon: 'flaticon-fan',
+            route: '/about'
           },
           {
             title: '无色庵',
-            icon: 'flaticon-teapot'
+            icon: 'flaticon-teapot',
+            route: '/diary'
           },
           {
             title: '乐斋',
-            icon: 'flaticon-erhu'
+            icon: 'flaticon-erhu',
+            route: '/diary'
           },
           {
             title: '天涯',
-            icon: 'flaticon-cultures'
+            icon: 'flaticon-cultures',
+            route: '/diary'
           },
           {
             title: '狂浪生',
-            icon: 'flaticon-dragon-1'
+            icon: 'flaticon-dragon-1',
+            route: '/diary'
           },
           {
             title: '百鸣苑',
-            icon: 'flaticon-face'
+            icon: 'flaticon-face',
+            route: '/diary'
           }
         ]
       }

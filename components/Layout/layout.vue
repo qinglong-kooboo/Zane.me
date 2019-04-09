@@ -6,8 +6,8 @@
       <side-menu />
       <div class="content">
         <nuxt :nuxt-child-key="$route.name" keep-alive />
-        <side-bar />
       </div>
+      <side-bar />
     </div>
     <app-footer />
   </div>
@@ -21,6 +21,10 @@
   import SideBar from './sideBar'
   export default {
     name: 'app-layout',
+    layoutTransition: 'layout',
+    transition: {
+      name: 'layout'
+    },
     components: {
       AppHeader,
       AppFooter,
@@ -34,7 +38,6 @@
 <style lang="scss" scoped>
 .app-container {
   position: relative;
-  width: 100%;
   height: 100%;
   & > .wrapper {
     width: 100%;
@@ -45,9 +48,7 @@
     margin-bottom: 5em;
     & > .content {
       position: relative;
-      width: 75em;
-      display: flex;
-      justify-content: space-between;
+      width: 42.5em;
       padding: 1em 0 0 0;
       margin-left: 27em;
     }

@@ -18,21 +18,21 @@
   // import 'vue-zane-swiper/lib/swiper.css'
   export default {
     components: {
-      ArticleList,
-      Slider
+      Slider,
+      ArticleList
     },
     computed: {
       sliders() {
         return this.$store.state.swiper.sliders
       },
       articles() {
-        return this.$store.state.articles.list
+        return this.$store.state.article.list
       }
     },
     fetch({ store }) {
       return Promise.all([
         store.dispatch('swiper/getSlidersData'),
-        store.dispatch('articles/getArticleList')
+        store.dispatch('article/getArticleList')
       ])
     }
   }
