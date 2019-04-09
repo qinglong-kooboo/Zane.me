@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="diary">
     111
   </div>
 </template>
@@ -10,5 +10,8 @@
   }
 
 </script>
-<style>
+<style lang="scss" scoped>
+.diary {
+  min-height: 1000px;
+}
 </style>

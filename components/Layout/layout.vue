@@ -50,7 +50,8 @@
       position: relative;
       width: 42.5em;
       padding: 1em 0 0 0;
-      margin-left: 27em;
+      margin-left: 14.5em;
+      margin-right: 1em;
     }
   }
 }

@@ -36,48 +36,36 @@
 </script>
 <style lang="scss" scoped>
 .sideBar {
-  width: 17.5em;
-  margin: 1em 14em 0 1em;
+  width: 19em;
+  margin: 1em 0;
   z-index: 1;
   .search-box {
+    box-sizing: border-box;
     width: 100%;
-    height: 2em;
-    padding: .5em 0 .5em .5em;
+    padding: .5em;
     background-color: #fff;
     display: flex;
     align-items: center;
-    margin-right: .5em;
     input {
-      height: 100%;
-      width: calc(100% - 35px);
-      border: none;
-      padding: 0;
-      background-color: $input-bgc;
-      outline:0;
-      text-indent: 8px;
-      transition: all .5s ease;
-      &:hover {
-        border: none;
-        background-color: $input-hover;
-      }
+      height: 2.4em;
+      width: calc(100% - 2em);
     }
     & > .iconfont {
       background-color: $input-hover;
-      padding: 3px 6px;
+      padding: 5px 7px;
       cursor: pointer;
     }
   }
   .article-rank {
     min-height: 350px;
     margin-top: 1em;
-    margin-right: -6px;
+    // padding: 0 1em;
     background-color: $sideBar-bg-color;
     .rank-title-wrapper {
-      width: 100%;
+      // width: 100%;
       height: 3em;
       line-height: 3em;
-      margin: 0 auto;
-      padding: 0 1em;
+      margin-left: 1em;
       border-bottom: 1px dashed $background;
       .rank-title {
         font-weight: 700;

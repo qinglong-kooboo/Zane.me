@@ -47,7 +47,7 @@
     background: linear-gradient(to right,#AAAAAA, #fff);
     color: #fff;
     .sliderTextIcon {
-      flex:  0 1 60px;
+      flex: 0 1 60px;
       width: 60px;
       display: flex;
       justify-content: center;
