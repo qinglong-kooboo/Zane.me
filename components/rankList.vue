@@ -31,13 +31,13 @@
     margin-bottom: .5em;
     overflow: hidden;
     .rankNo {
-      width: 1.2em;
-      height: 1.2em;
-      line-height: 1.2em;
+      width: 1.4em;
+      height: 1.4em;
+      line-height: 1.4em;
       margin-right: .8em;
+      box-sizing: border-box;
       text-align: center;
-      font-weight: 300;
-      font-size: .8rem;
+      font-size: .75rem;
       background-color: $input-hover;
     }
     .rank-article-title {

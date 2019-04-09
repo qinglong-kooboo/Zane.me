@@ -15,9 +15,9 @@
     validate({ params }) {
       return !!params.keyword
     },
-    transition: {
-      name: 'module'
-    },
+    // transition: {
+    //   name: 'module'
+    // },
     components: {
       ArticleList
     },

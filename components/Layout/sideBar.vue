@@ -27,6 +27,9 @@
     },
     methods: {
       handleSearch() {
+        if (!this.keyword) {
+          return
+        }
         const keyword = this.keyword
         this.$router.push({ name: 'search-keyword', params: { keyword } })
       }
@@ -59,10 +62,8 @@
   .article-rank {
     min-height: 350px;
     margin-top: 1em;
-    // padding: 0 1em;
     background-color: $sideBar-bg-color;
     .rank-title-wrapper {
-      // width: 100%;
       height: 3em;
       line-height: 3em;
       margin-left: 1em;

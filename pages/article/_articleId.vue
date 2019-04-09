@@ -13,9 +13,9 @@
     validate({ params }) {
       return params.articleId && !isNaN(Number(params.articleId))
     },
-    transition: {
-      name: 'module'
-    },
+    // transition: {
+    //   name: 'module'
+    // },
     computed: {
       article() {
         return this.$store.state.article.article
