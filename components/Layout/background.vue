@@ -20,7 +20,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image: url(../../assets/imgs/background.png);
+      background-image: url('/imgs/background.png');
       background-attachment:fixed;
       background-repeat: no-repeat;
       width: 100%;

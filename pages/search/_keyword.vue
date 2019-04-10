@@ -1,7 +1,7 @@
 <template>
-  <div :key="this.$route.params.keyword" class="searchList">
+  <div :key="$route.params.keyword" class="searchList">
     <div class="topShow">
-      <img src="../../assets/imgs/search.svg" alt="" class="search-icon">
+      <img src="/imgs/search.svg" alt="" class="search-icon">
       <span class="text">和 “ {{ keyword }} ”有关的所有文章</span>
       <div class="background"></div>
     </div>
@@ -15,9 +15,9 @@
     validate({ params }) {
       return !!params.keyword
     },
-    // transition: {
-    //   name: 'module'
-    // },
+    transition: {
+      name: 'module'
+    },
     components: {
       ArticleList
     },
@@ -45,7 +45,7 @@
     width: 100%;
     height: 11.5rem;
     margin-bottom: 1em;
-    background-image: url('../../assets/imgs/service.jpg');
+    background-image: url('/imgs/service.jpg');
     background-size: 100% 130%;
     background-repeat: no-repeat;
     .search-icon {

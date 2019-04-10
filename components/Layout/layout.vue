@@ -4,7 +4,7 @@
     <background />
     <div class="wrapper">
       <side-menu />
-      <div class="content">
+      <div class="content" :style="{ minHeight: contentHeight + 'px' }">
         <nuxt :nuxt-child-key="$route.name" keep-alive />
       </div>
       <side-bar />
@@ -14,23 +14,29 @@
 </template>
 
 <script>
+  import calcContentHeight from '../../utils/calcContentHeight.js'
   import AppHeader from './header'
   import AppFooter from './footer'
   import Background from './background'
   import SideMenu from './sideMenu'
   import SideBar from './sideBar'
+
   export default {
     name: 'app-layout',
-    layoutTransition: 'layout',
-    transition: {
-      name: 'layout'
-    },
     components: {
       AppHeader,
       AppFooter,
       Background,
       SideMenu,
       SideBar
+    },
+    data() {
+      return {
+        contentHeight: 0
+      }
+    },
+    mounted() {
+      this.contentHeight = calcContentHeight()
     }
   }
 
@@ -44,7 +50,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    margin-top: $header-height;
+    padding-top: $header-height;
     margin-bottom: 5em;
     & > .content {
       position: relative;

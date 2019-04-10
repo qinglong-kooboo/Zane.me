@@ -29,21 +29,22 @@ module.exports = {
   */
   css: [
     {
-      src: './sass/app.scss',
+      src: './assets/sass/app.scss',
       lang: 'sass'
     }
   ],
 
   styleResources: {
-    scss: './sass/init.scss'
+    scss: './assets/sass/init.scss'
   },
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { mode: 'client', src: './plugins/swiper' },
-    { src: '~plugins/mock/index', ssr: true }
+    { src: '~plugins/swiper' },
+    { src: '~plugins/mock/index' },
+    { src: '~plugins/gravatar' }
   ],
 
   /*

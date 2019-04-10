@@ -5,7 +5,7 @@
         <div class="header-con-left">
           <span class="navbar-blank"></span>
           <nuxt-link :to="'/'" class="logo">
-            <img src="../../assets/imgs/zane.jpg" alt="header-logo">
+            <img src="/imgs/logo.svg" alt="header-logo">
           </nuxt-link>
           <nuxt-link :to="'/'">
             <span class="slogan">每一个不曾起舞的日子，都是对生命的辜负</span>
@@ -49,6 +49,8 @@
         align-items: center;
         position: relative;
         .logo {
+          display: flex;
+          align-items: center;
           cursor: pointer;
         }
         img {
@@ -57,6 +59,7 @@
           margin-right: 4rem;
           filter: var(--theme-logo-rotate);
           user-select: none;
+          pointer-events: auto; // fix logo click bug
         }
         .navbar-blank {
           position: absolute;
@@ -65,6 +68,7 @@
           width: 60%;
           height: 100%;
           opacity: 0;
+          pointer-events: none;
           animation: logo-blink 8s ease-in 1s infinite;
           &:before {
             content: '';
@@ -104,6 +108,7 @@
           user-select: none;
           color: $primary;
           cursor: pointer;
+          pointer-events: auto;
         }
       }
       .header-con-right {

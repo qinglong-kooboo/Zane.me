@@ -1,25 +1,25 @@
 <template>
   <div class="mainContent">
-    <!-- <swiper :sliders="sliders.picSliders" /> -->
-    <slider :sliders="sliders.picSliders" />
+    <swiper :sliders="sliders.picSliders" />
     <div class="sliderTextWrapper">
       <div class="sliderTextIcon">
         <span class="iconfont">&#xe77e;</span>
       </div>
-      <slider :sliders="sliders.textSliders" />
+      <swiper :sliders="sliders.textSliders" />
     </div>
     <article-list :list="articles" />
   </div>
 </template>
 
 <script>
-  import Slider from '../components/swiper.vue'
   import ArticleList from '../components/articleList.vue'
-  // import 'vue-zane-swiper/lib/swiper.css'
+  import 'vue-zane-swiper/lib/swiper.css'
   export default {
     components: {
-      Slider,
       ArticleList
+    },
+    transition: {
+      name: 'module'
     },
     computed: {
       sliders() {

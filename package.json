@@ -20,6 +20,7 @@
     "@nuxtjs/style-resources": "^0.1.2",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
+    "gravatar": "^1.8.0",
     "import-glob-loader2": "^1.1.2",
     "mini-sliders": "^1.0.1",
     "mockjs": "^1.0.1-beta3",
