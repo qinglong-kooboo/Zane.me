@@ -18,9 +18,6 @@
     components: {
       ArticleList
     },
-    transition: {
-      name: 'module'
-    },
     computed: {
       sliders() {
         return this.$store.state.swiper.sliders

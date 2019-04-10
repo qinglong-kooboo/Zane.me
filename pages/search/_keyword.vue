@@ -1,5 +1,5 @@
 <template>
-  <div :key="$route.params.keyword" class="searchList">
+  <div class="searchList">
     <div class="topShow">
       <img src="/imgs/search.svg" alt="" class="search-icon">
       <span class="text">和 “ {{ keyword }} ”有关的所有文章</span>
@@ -14,9 +14,6 @@
   export default {
     validate({ params }) {
       return !!params.keyword
-    },
-    transition: {
-      name: 'module'
     },
     components: {
       ArticleList

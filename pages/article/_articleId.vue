@@ -1,5 +1,5 @@
 <template>
-  <div :key="$route.params.articleId" class="wrapper">
+  <div class="wrapper">
     <div class="article">
       <h2 class="title">{{ article.title }}</h2>
       <div class="article-content">
@@ -19,9 +19,6 @@
     },
     components: {
       CommentList
-    },
-    transition: {
-      name: 'module'
     },
     computed: {
       article() {
