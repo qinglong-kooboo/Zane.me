@@ -26,12 +26,13 @@ $primary-opacity-9: var(--primary-opacity-9-color);
 $primary-opacity-5: var(--primary-opacity-5-color);
 
 // Text
+$black: #000;
 $text: rgb(85, 85, 85);
 $text-dark: var(--text-dark);
 $text-darken: var(--text-darken);
 $text-light: var(--text-light);
 $secondary: rgba(0, 0, 0, .64);
-$disabled: var(--text-disabled);
+$disabled: rgba($black, .32);
 $dividers: var(--text-dividers);
 
 $white: var(--text-reversal);
@@ -92,6 +93,7 @@ $font-family: $sans-serif;
 $font-size-base: 14px;
 $font-size-large: 1.2rem;
 $font-size-small: .85rem;
+$font-size-mini: .75rem;
 $font-size-h1: 2rem;
 $font-size-h2: 1.2rem;
 $font-size-h3: 1.5rem;

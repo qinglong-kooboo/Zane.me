@@ -1,7 +1,12 @@
 <template>
   <div class="sideBar">
     <div class="search-box">
-      <input v-model.trim="keyword" type="text" placeholder="知者不惑，仁者不忧，勇者不惧">
+      <input
+        v-model.trim="keyword"
+        type="text"
+        placeholder="知者不惑，仁者不忧，勇者不惧"
+        @keyup.enter="handleSearch"
+      >
       <span class="iconfont" @click="handleSearch">&#xe505;</span>
     </div>
     <div class="article-rank">
