@@ -48,6 +48,7 @@
     align-items: center;
     background-color: #fff;
     .article-content {
+      margin-bottom: 2em;
       & > img {
         width: 527px;
         height: 186px;

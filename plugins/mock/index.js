@@ -15,4 +15,5 @@ export default ({ $axios }) => {
   mock.onGet('/article/0').reply(200, articleDetail)
   mock.onGet('/index/ranklist').reply(200, rankList)
   mock.onGet('/comment/0').reply(200, comments.comments)
+  mock.onPost('/comment').reply(200, comments.result)
 }

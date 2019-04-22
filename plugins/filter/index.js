@@ -1,5 +1,4 @@
+import Vue from 'vue'
 import calcTimeToNow from './calcTimeToNow'
 
-export default {
-  calcTimeToNow
-}
+Vue.filter('calcTimeToNow', calcTimeToNow)

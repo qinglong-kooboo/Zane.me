@@ -39,8 +39,8 @@ $white: var(--text-reversal);
 $text-reversal: var(--text-reversal);
 
 // Links
-$link-color: var(--link-color);
-$link-hover-color: var(--link-hover-color);
+$link-color: rgb(85, 85, 85);
+$link-hover-color: darken($text, 20%);
 
 // Colors
 $primary: #0088f5;
@@ -54,6 +54,8 @@ $black: #000;
 $black-light: #555;
 $input-bgc: rgba(223, 223, 223, 1);
 $input-hover: rgba(195, 195, 195, 1);
+$textarea-hover: rgb(210, 210, 210);
+$button: rgb(174, 174, 174);
 
 // Container
 $header-height: 4.5em;

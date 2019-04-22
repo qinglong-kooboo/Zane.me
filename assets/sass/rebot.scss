@@ -88,6 +88,31 @@ input {
   }
 }
 
+textarea {
+  border: none;
+  padding: 0;
+  background-color: $input-bgc;
+  resize: none;
+  outline: 0;
+  text-indent: 6px;
+  transition: all .5s ease;
+  &:hover {
+    background-color: $textarea-hover;
+  }
+}
+
+button {
+  height: 2em;
+  line-height: 2em;
+  width: 7em;
+  background-color: $button;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: $text;
+  cursor: pointer;
+}
+
 small {
   color: $secondary;
   vertical-align: bottom;

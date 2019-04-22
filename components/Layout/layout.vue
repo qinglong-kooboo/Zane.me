@@ -4,7 +4,10 @@
     <background />
     <div class="wrapper">
       <side-menu />
-      <div class="content" :style="{ minHeight: contentHeight + 'px' }">
+      <!-- <div class="content" :style="{ minHeight: contentHeight + 'px' }">
+        <nuxt :nuxt-child-key="$route.name" keep-alive />
+      </div> -->
+      <div class="content">
         <nuxt :nuxt-child-key="$route.name" keep-alive />
       </div>
       <side-bar />
@@ -14,7 +17,7 @@
 </template>
 
 <script>
-  import calcContentHeight from '../../utils/calcContentHeight.js'
+  // import calcContentHeight from '../../utils/calcContentHeight.js'
   import AppHeader from './header'
   import AppFooter from './footer'
   import Background from './background'
@@ -30,13 +33,16 @@
       SideMenu,
       SideBar
     },
-    data() {
-      return {
-        contentHeight: 0
-      }
-    },
+    // data() {
+    //   return {
+    //     contentHeight: 0
+    //   }
+    // },
     mounted() {
-      this.contentHeight = calcContentHeight()
+      // this.contentHeight = calcContentHeight()
+    },
+    beforeDestroy() {
+      // this.contentHeight = 0
     }
   }
 

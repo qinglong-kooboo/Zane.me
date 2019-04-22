@@ -1,13 +1,14 @@
 // cacl date between input time and now
 export default (time) => {
-  const now = Date.parse(new Date())
-  const gap = (now - time) / 60 * 1000
-  if (gap >= 24) {
-    const result = gap / 24
-    return `${result}天前`
-  } else if (gap >= 1 && gap < 24) {
-    return `${gap}小时前`
-  } else if (gap > 0 ){
+  const now = (new Date()).getTime()
+  const gap = Math.round((now - time) / (60 * 1000))
+  if (gap < 1) {
+    return '刚刚'
+  } else if (gap > 1 && gap < 60) {
+    return `${gap}分钟前`
+  } else if (gap > 60 && gap / 60 < 24) {
+    return `${Math.round(gap / 60)}小时前`
+  } else if (gap / 60 >= 24) {
+    return `${Math.round(gap / (60 * 24))}天前`
   }
-  return gap / 24 > 0 ? gap / 24 : gap
 }

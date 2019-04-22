@@ -12,8 +12,9 @@ export default {
         country: 'CN',
         city: 'Xiamen'
       },
-      reply: 'cool',
-      createdAt: ''
+      reply: '- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.',
+      createdAt: '1554945000000',
+      thumbup: 0
     },
     {
       id: 1,
@@ -27,7 +28,9 @@ export default {
         country: 'CN',
         city: 'Shanghai'
       },
-      reply: 'cool'
+      reply: '- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.',
+      createdAt: '1555027676000',
+      thumbup: 1
     },
     {
       id: 2,
@@ -42,7 +45,9 @@ export default {
         country: 'CN',
         city: 'Shanghai'
       },
-      reply: 'cool'
+      reply: '- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.',
+      createdAt: '1555034100000',
+      thumbup: 2
     },
     {
       id: 3,
@@ -56,7 +61,9 @@ export default {
         country: 'CN',
         city: 'Shanghai'
       },
-      reply: 'cool'
+      reply: '- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.',
+      createdAt: '1547258100000',
+      thumbup: 3
     },
     {
       id: 4,
@@ -71,7 +78,14 @@ export default {
         country: 'CN',
         city: 'Shanghai'
       },
-      reply: 'cool'
+      reply: '- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.- **Preview:**  A live display of the generated HTML as it would render in a browser.- **HTML Source:**  The generated HTML before your browser makes it pretty.',
+      createdAt: '1555035000000',
+      thumbup: 4
     }
-  ]
+  ],
+  result: {
+    status: 200,
+    errCode: 0,
+    message: 'submit success'
+  }
 }

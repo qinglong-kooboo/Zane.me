@@ -19,5 +19,14 @@ export const actions = {
         reject(error)
       })
     })
+  },
+  submitComment({ commit, params = {} }) {
+    return new Promise((resolve, reject) => {
+      this.$axios.$post('/comment', params).then(res => {
+        resolve(res)
+      }).catch(error => {
+        reject(error)
+      })
+    })
   }
 }

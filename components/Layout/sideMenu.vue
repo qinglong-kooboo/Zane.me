@@ -27,17 +27,17 @@
         isActive: 0,
         menuList: [
           {
-            title: '明殿',
+            title: '雄宝殿',
             icon: 'flaticon-chinese-new-year',
             route: '/'
           },
           {
-            title: '宁静寺',
+            title: '云梦泽',
             icon: 'flaticon-china',
             route: '/diary'
           },
           {
-            title: '琼宝阁',
+            title: '莲花坞',
             icon: 'flaticon-fan',
             route: '/about'
           },

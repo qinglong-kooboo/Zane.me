@@ -44,7 +44,9 @@ module.exports = {
   plugins: [
     { src: '~plugins/swiper' },
     { src: '~plugins/mock/index' },
-    { src: '~plugins/gravatar' }
+    { src: '~plugins/gravatar' },
+    { src: '~plugins/filter' },
+    { src: '~plugins/marked' }
   ],
 
   /*
