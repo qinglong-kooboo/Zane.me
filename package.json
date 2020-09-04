@@ -23,7 +23,7 @@
     "gravatar": "^1.8.0",
     "highlight.js": "^9.15.6",
     "import-glob-loader2": "^1.1.2",
-    "marked": "^0.6.2",
+    "marked": "^0.7.0",
     "mini-sliders": "^1.0.1",
     "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.11.0",
