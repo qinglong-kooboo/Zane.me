@@ -27,7 +27,7 @@
     "mini-sliders": "^1.0.1",
     "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.11.0",
-    "nuxt": "^2.4.0",
+    "nuxt": "^2.15.8",
     "pm2": "^3.3.1",
     "sass-loader": "^7.1.0",
     "vue-zane-swiper": "^0.2.5"
@@ -50,9 +50,9 @@
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.0.0",
-    "jest": "^23.6.0",
+    "jest": "^29.3.1",
     "nodemon": "^1.18.9",
     "prettier": "1.14.3",
-    "vue-jest": "^3.0.2"
+    "vue-jest": "^4.0.1"
   }
 }
